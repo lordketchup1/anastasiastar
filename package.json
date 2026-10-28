@@ -1,0 +1,38 @@
+{
+    "name": "starshinova-site",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "description": "",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc --noEmit && vite build",
+        "preview": "vite preview --port 4173",
+        "typecheck": "tsc --noEmit",
+        "test:unit": "vitest run",
+        "test:e2e": "npm run build && npm run build:test && playwright test",
+        "check:links": "node scripts/check-links.mjs",
+        "test": "npm run typecheck && npm run test:unit && npm run test:e2e",
+        "build:test": "vite build --mode test --outDir dist-test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@fontsource-variable/cormorant-garamond": "^5.3.0",
+        "@fontsource-variable/inter": "^5.3.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "@axe-core/playwright": "^4.14.0",
+        "@playwright/test": "^1.64.1",
+        "@types/react": "^18.3.31",
+        "@types/react-dom": "^18.3.7",
+        "@vitejs/plugin-react": "^6.1.2",
+        "sharp": "^0.35.5",
+        "typescript": "^7.0.2",
+        "vite": "^8.3.5",
+        "vitest": "^5.0.5"
+    }
+}
